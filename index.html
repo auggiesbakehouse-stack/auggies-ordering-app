@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6b3427">
+<meta name="description" content="Order fresh bakes from Auggie's Bakehouse, Pune.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>Auggie's Bakehouse | Order Online</title>
+<style>
+:root{--cream:#fff8ed;--paper:#fffdf8;--brown:#6b3427;--brown2:#8b4b37;--ink:#39271f;--muted:#79685f;--line:#eadbc9;--pink:#f2d7ca;--green:#486b4a;--shadow:0 8px 28px #6b342711}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.wrap{max-width:1050px;margin:auto;padding:0 16px 100px}.top{padding:24px 0 18px;display:flex;align-items:center;gap:14px}.logo-img{width:62px;height:62px;object-fit:cover;object-position:center;border-radius:50%;border:1px solid var(--line);background:#fff}.brand h1{font-family:Georgia,serif;font-size:clamp(25px,4vw,36px);margin:0;color:var(--brown);letter-spacing:-.6px}.brand p{margin:4px 0 0;color:var(--muted);font-size:13px;letter-spacing:1.2px;text-transform:uppercase}.top-actions{margin-left:auto;display:flex;gap:8px}.pill{background:#fffaf2;border:1px solid var(--line);color:var(--brown);border-radius:999px;padding:10px 13px;font-weight:700}.hero{background:var(--brown);color:#fff5e7;border-radius:22px;padding:25px;display:flex;gap:20px;align-items:center;justify-content:space-between;box-shadow:var(--shadow)}.hero h2{font:700 clamp(25px,4vw,38px)/1.1 Georgia,serif;margin:0 0 9px}.hero p{margin:0;color:#f1d9c8;max-width:540px;line-height:1.5}.hero .stamp{font-size:56px;opacity:.92}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:28px 0 13px}.section-head h2{font:700 24px Georgia,serif;color:var(--brown);margin:0}.section-head p{margin:5px 0 0;color:var(--muted);font-size:13px}.tabs{display:flex;gap:8px;overflow:auto;padding:3px 0 12px}.tab{white-space:nowrap;border:1px solid var(--line);background:#fffaf2;color:var(--brown);border-radius:999px;padding:9px 14px;font-weight:700}.tab.active{background:var(--brown);color:#fff5e7}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.product{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}.product-art{height:125px;display:grid;place-items:center;background:linear-gradient(135deg,#f4dfc5,#f8ead9);font-size:56px}.product-body{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}.product h3{font:700 18px Georgia,serif;color:var(--brown);margin:0}.product .desc{font-size:13px;line-height:1.4;color:var(--muted);min-height:35px}.product-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto}.price{font-weight:800;color:var(--brown);font-size:18px}.add,.primary{background:var(--brown);color:#fff8ed;border-radius:12px;padding:10px 14px;font-weight:800}.add:disabled{opacity:.45;cursor:not-allowed}.secondary{background:#f4e5d7;color:var(--brown);border-radius:12px;padding:10px 13px;font-weight:800}.layout{display:grid;grid-template-columns:1fr 340px;gap:18px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow)}.panel h2,.panel h3{font:700 21px Georgia,serif;color:var(--brown);margin:0 0 13px}.cart-row{display:grid;grid-template-columns:1fr auto;gap:8px;padding:12px 0;border-bottom:1px solid var(--line)}.cart-row small{display:block;color:var(--muted);margin-top:4px}.qty{display:flex;align-items:center;gap:8px}.qty button{background:#f4e5d7;color:var(--brown);width:28px;height:28px;border-radius:9px;font-weight:900}.totals{display:flex;justify-content:space-between;margin:13px 0;font-weight:800}.note{background:#fff0dc;border:1px solid #edd3ad;border-radius:12px;padding:12px;font-size:13px;line-height:1.45;color:#684627}.field{display:flex;flex-direction:column;gap:6px;margin:11px 0}.field label{font-size:13px;font-weight:800;color:var(--brown)}.field input,.field select,.field textarea{border:1px solid var(--line);background:#fffdfa;border-radius:10px;padding:11px;color:var(--ink);width:100%;min-width:0}.field textarea{min-height:70px;resize:vertical}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.muted{color:var(--muted);font-size:13px}.wide{width:100%;margin-top:9px}.hidden{display:none!important}.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:#fffaf2ed;backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:10px 14px;display:flex;justify-content:center;gap:10px;z-index:10}.bottom-nav button{max-width:340px;flex:1}.admin-list{display:flex;flex-direction:column;gap:10px}.admin-item{border:1px solid var(--line);border-radius:12px;padding:12px;display:grid;grid-template-columns:1fr auto;gap:10px}.status{display:inline-block;font-size:11px;font-weight:800;border-radius:999px;padding:4px 8px;background:#f4e5d7;color:var(--brown)}.order-card{border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}.order-card h4{margin:0 0 6px;color:var(--brown)}.order-meta{font-size:13px;color:var(--muted);line-height:1.55}.toast{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:30;background:#30231e;color:#fff;border-radius:12px;padding:12px 16px;box-shadow:var(--shadow);max-width:90%;font-size:14px}.footer{text-align:center;color:var(--muted);font-size:12px;margin:28px 0}.small-btn{padding:7px 10px;border-radius:9px;background:#f4e5d7;color:var(--brown);font-weight:800}.danger{background:#fbe5e0;color:#9c2d1e}.admin-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.layout{grid-template-columns:1fr}.hero{padding:21px}.hero .stamp{font-size:42px}.product-art{height:105px}.product-body{padding:11px}.product h3{font-size:16px}.top-actions .pill{padding:8px 10px}.two{grid-template-columns:1fr 1fr}}
+@media(max-width:390px){.grid{grid-template-columns:1fr 1fr}.brand p{font-size:10px}.logo-img{width:49px;height:49px}.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <img class="logo-img" src="assets/auggies-logo.jpg" alt="Auggie’s Bakehouse logo">
+  <div class="brand"><h1>Auggie's Bakehouse</h1><p>Homemade happiness · Pune</p></div>
+  <div class="top-actions"><button class="pill" id="openAdmin">Manage</button></div>
+</header>
+<section class="hero">
+  <div><h2>Freshly baked.<br>Made with love.</h2><p>Cookies, brownies and bakes for your everyday cravings and special moments.</p></div>
+  <div class="stamp" aria-hidden="true">🍪</div>
+</section>
+
+<section id="shopView">
+  <div class="section-head"><div><h2>Our menu</h2><p>Choose your favourites and build your box.</p></div><button class="secondary" id="scrollCart">Cart <span id="cartCount">0</span></button></div>
+  <div class="tabs" id="categoryTabs"></div>
+  <div class="grid" id="productGrid"></div>
+  <div class="section-head"><div><h2>Your order</h2><p>Delivery fee is confirmed separately.</p></div></div>
+  <div class="layout">
+    <section class="panel">
+      <h2>Order details</h2>
+      <div id="cartItems"></div>
+      <div class="totals"><span>Items subtotal</span><span id="subtotal">₹0</span></div>
+      <div class="note">Delivery charges are not included in this subtotal. We will check the live delivery quote and confirm the final amount with you before confirming the order.</div>
+      <form id="orderForm">
+        <div class="two">
+          <div class="field"><label for="custName">Your name *</label><input id="custName" required autocomplete="name" placeholder="Full name"></div>
+          <div class="field"><label for="custPhone">Mobile number *</label><input id="custPhone" required inputmode="tel" autocomplete="tel" pattern="[0-9+() -]{10,16}" placeholder="10-digit number"></div>
+        </div>
+        <div class="field"><label for="fulfilment">Order type *</label><select id="fulfilment"><option value="Delivery">Delivery</option><option value="Pickup">Store pickup</option></select></div>
+        <div class="field" id="addressField"><label for="custAddress">Delivery address *</label><textarea id="custAddress" required autocomplete="street-address" placeholder="Flat / building, street, area, Pune, PIN code"></textarea></div>
+        <div class="two">
+          <div class="field"><label for="orderDate">Preferred date *</label><input id="orderDate" type="date" required></div>
+          <div class="field"><label for="orderTime">Preferred time *</label><select id="orderTime" required><option value="">Choose a time</option><option>9:00–11:00 AM</option><option>11:00 AM–1:00 PM</option><option>1:00–3:00 PM</option><option>3:00–5:00 PM</option><option>5:00–7:00 PM</option><option>7:00–9:00 PM</option></select></div>
+        </div>
+        <div class="field"><label for="orderNotes">Special instructions (optional)</label><textarea id="orderNotes" placeholder="Message on cake, allergies to discuss, packaging requests…"></textarea></div>
+        <div class="field"><label for="payMethod">Payment preference *</label><select id="payMethod"><option value="UPI">UPI (payment link/QR to be confirmed)</option><option value="Cash on pickup/delivery">Cash on pickup/delivery, if available</option></select></div>
+        <button class="primary wide" type="submit">Place order request</button>
+        <p class="muted">Your order request is saved on this device in this demo. In the live version, it will be stored securely online.</p>
+      </form>
+    </section>
+    <aside class="panel">
+      <h3>How it works</h3>
+      <p class="muted">1. Send your order request.</p><p class="muted">2. We check the current delivery fee.</p><p class="muted">3. We message you to confirm the final total.</p><p class="muted">4. Your order is confirmed after you approve the total and payment arrangement.</p>
+      <button class="secondary wide" id="directWhatsApp">Prefer WhatsApp? Message us</button>
+      <div id="staticUpiPanel" class="hidden"><h3>Pay using Paytm / UPI</h3><img src="assets/paytm-upi-qr.jpg" alt="Auggie’s Bakehouse Paytm UPI QR" style="width:100%;height:auto;border:1px solid var(--line);border-radius:12px"><p class="muted">Scan this merchant QR after we confirm your final total. Enter the exact amount we confirm.</p></div><p class="muted">Add your WhatsApp number in Manage → Settings before use.</p>
+    </aside>
+  </div>
+</section>
+
+<section id="adminView" class="hidden">
+  <div class="section-head"><div><h2>Bakery dashboard</h2><p>Manage products, review requests and upcoming orders.</p></div><button class="secondary" id="backToShop">Back to shop</button></div>
+  <div class="admin-bar"><button class="tab active" data-admin-tab="orders">Orders & calendar</button><button class="tab" data-admin-tab="products">Products</button><button class="tab" data-admin-tab="settings">Settings</button></div>
+  <div id="adminOrders">
+    <div class="panel">
+      <div class="two"><div class="field"><label for="filterDate">Orders on date</label><input type="date" id="filterDate"></div><div class="field"><label for="filterStatus">Filter status</label><select id="filterStatus"><option value="">All statuses</option><option>New request</option><option>Awaiting delivery quote</option><option>Awaiting customer approval</option><option>Confirmed</option><option>Preparing</option><option>Out for delivery</option><option>Completed</option><option>Cancelled</option></select></div></div>
+      <div id="ordersList" class="admin-list"></div>
+    </div>
+  </div>
+  <div id="adminProducts" class="hidden">
+    <div class="panel">
+      <h3 id="productFormTitle">Add a product</h3>
+      <form id="productForm">
+        <input type="hidden" id="editProductId">
+        <div class="two"><div class="field"><label for="pName">Product name *</label><input id="pName" required></div><div class="field"><label for="pPrice">Price in ₹ *</label><input id="pPrice" type="number" min="1" step="1" required></div></div>
+        <div class="two"><div class="field"><label for="pCategory">Category *</label><input id="pCategory" required placeholder="Classic Cookies"></div><div class="field"><label for="pEmoji">Menu icon</label><select id="pEmoji"><option>🍪</option><option>🍫</option><option>🍰</option><option>🥐</option><option>🍞</option><option>☕</option><option>🧁</option></select></div></div>
+        <div class="field"><label for="pDesc">Description</label><input id="pDesc"></div>
+        <div class="two"><div class="field"><label for="pAvailable">Availability</label><select id="pAvailable"><option value="true">Available</option><option value="false">Unavailable</option></select></div><div class="field"><label for="pSort">Display order</label><input id="pSort" type="number" value="10"></div></div>
+        <button class="primary" type="submit">Save product</button> <button class="secondary" type="button" id="cancelEdit">Clear</button>
+      </form>
+    </div>
+    <div class="panel" style="margin-top:14px"><h3>Menu products</h3><div id="productAdminList" class="admin-list"></div></div>
+  </div>
+  <div id="adminSettings" class="hidden">
+    <div class="panel">
+      <h3>Business settings</h3>
+      <form id="settingsForm">
+        <div class="field"><label for="businessPhone">WhatsApp number (country code + number, digits only)</label><input id="businessPhone" placeholder="919XXXXXXXXX"></div>
+        <div class="field"><label for="upiId">UPI ID / VPA</label><input id="upiId" placeholder="yourname@bank"></div>
+        <div class="field"><label for="upiName">UPI payee name</label><input id="upiName" value="Auggie's Bakehouse"></div>
+        <div class="field"><label for="businessAddress">Pickup address</label><textarea id="businessAddress"></textarea></div>
+        <div class="field"><label for="currencyNote">Customer checkout note</label><textarea id="currencyNote">Delivery fee will be checked and confirmed separately before your order is confirmed.</textarea></div>
+        <button class="primary" type="submit">Save settings</button>
+      </form>
+      <div class="note" style="margin-top:14px"><b>Important:</b> this demo can open a WhatsApp chat with a prepared message, but cannot send a WhatsApp message automatically. Automatic messages need a secure server and approved WhatsApp Business Platform setup. UPI links can open a payment app, but this demo cannot verify payment. Never mark an order paid based only on a screenshot.</div>
+      <button class="secondary wide" id="exportData">Export orders & menu (JSON)</button>
+      <button class="secondary wide" id="resetDemo">Reset demo data</button>
+    </div>
+  </div>
+</section>
+<div class="footer">Auggie's Bakehouse · Pune · Homemade happiness</div>
+</div>
+<div class="bottom-nav"><button class="primary" id="bottomCart">View cart · <span id="bottomCartCount">0</span> items</button><button class="secondary" id="bottomManage">Manage orders</button></div>
+<div id="toast" class="toast hidden" role="status"></div>
+<script>
+const STORE_KEY='auggies_v1_demo';
+const defaultProducts=[
+{id:"p1",name:"Classic Chocolate Chip",category:"Signature Cookies",price:65,desc:"Warm, gooey, and loaded with chocolate chips.",emoji:"\ud83c\udf6a",available:true,sort:1},
+{id:"p2",name:"Classic Chocolate Chip - Box of Cookies",category:"Signature Cookies",price:330,desc:"Box of cookies; confirm quantity before publishing.",emoji:"\ud83c\udf6a",available:true,sort:2},
+{id:"p3",name:"Healthy Oats",category:"Signature Cookies",price:65,desc:"Gluten-free oats, sugar-free dark chocolate and coconut sugar.",emoji:"\ud83c\udf6a",available:true,sort:3},
+{id:"p4",name:"Healthy Oats - Box of Cookies",category:"Signature Cookies",price:330,desc:"Box of cookies; confirm quantity before publishing.",emoji:"\ud83c\udf6a",available:true,sort:4},
+{id:"p5",name:"Choco-Walnut",category:"Signature Cookies",price:65,desc:"Warm, gooey, and loaded with dark chocolate and walnuts.",emoji:"\ud83c\udf6b",available:true,sort:5},
+{id:"p6",name:"Choco-Walnut - Box of Cookies",category:"Signature Cookies",price:330,desc:"Box of cookies; confirm quantity before publishing.",emoji:"\ud83c\udf6b",available:true,sort:6},
+{id:"p7",name:"Double Chocolate",category:"Exotic Cookies",price:65,desc:"Gooey blend of three kinds of chocolate.",emoji:"\ud83c\udf6b",available:true,sort:7},
+{id:"p8",name:"Double Chocolate - Box of Cookies",category:"Exotic Cookies",price:380,desc:"Box of cookies; confirm quantity before publishing.",emoji:"\ud83c\udf6b",available:true,sort:8},
+{id:"p9",name:"Red Velvet",category:"Exotic Cookies",price:65,desc:"Decadent red velvet with cream cheese swirl.",emoji:"\ud83c\udf6a",available:true,sort:9},
+{id:"p10",name:"Red Velvet - Box of Cookies",category:"Exotic Cookies",price:380,desc:"Box of cookies; confirm quantity before publishing.",emoji:"\ud83c\udf6a",available:true,sort:10},
+{id:"p11",name:"Mocha",category:"Exotic Cookies",price:65,desc:"The perfect blend of coffee and chocolate.",emoji:"\u2615",available:true,sort:11},
+{id:"p12",name:"Mocha - Box of Cookies",category:"Exotic Cookies",price:380,desc:"Box of cookies; confirm quantity before publishing.",emoji:"\u2615",available:true,sort:12},
+{id:"p13",name:"Healthy Oats - Kumud Edit",category:"Exotic Cookies",price:65,desc:"Sugar-free dark chocolate, almonds and flaxseeds.",emoji:"\ud83c\udf6a",available:true,sort:13},
+{id:"p14",name:"Healthy Oats - Kumud Edit - Box",category:"Exotic Cookies",price:380,desc:"Box of cookies; confirm quantity before publishing.",emoji:"\ud83c\udf6a",available:true,sort:14},
+{id:"p15",name:"Choco-filled",category:"Specialty Cookies",price:180,desc:"Nutella-filled delight.",emoji:"\ud83c\udf6a",available:true,sort:15},
+{id:"p16",name:"Choco-filled - Box of Cookies",category:"Specialty Cookies",price:850,desc:"Box of cookies; confirm quantity before publishing.",emoji:"\ud83c\udf6a",available:true,sort:16},
+{id:"p17",name:"Kunafa",category:"Specialty Cookies",price:210,desc:"Our take on the classic Dubai Kunafa.",emoji:"\ud83c\udf6a",available:true,sort:17},
+{id:"p18",name:"Kunafa - Box of Cookies",category:"Specialty Cookies",price:1000,desc:"Box of cookies; confirm quantity before publishing.",emoji:"\ud83c\udf6a",available:true,sort:18},
+{id:"p19",name:"Biscoff",category:"Specialty Cookies",price:210,desc:"Biscoff centre with a super indulgent cookie shell.",emoji:"\ud83c\udf6a",available:true,sort:19},
+{id:"p20",name:"Biscoff - Box of Cookies",category:"Specialty Cookies",price:1000,desc:"Box of cookies; confirm quantity before publishing.",emoji:"\ud83c\udf6a",available:true,sort:20},
+{id:"p21",name:"Snicker",category:"Specialty Cookies",price:210,desc:"Toffee centre with a super indulgent cookie shell.",emoji:"\ud83c\udf6b",available:true,sort:21},
+{id:"p22",name:"Snicker - Box of Cookies",category:"Specialty Cookies",price:1000,desc:"Box of cookies; confirm quantity before publishing.",emoji:"\ud83c\udf6b",available:true,sort:22},
+{id:"p23",name:"Brookie",category:"Brookies",price:180,desc:"Classic chocolate chip cookie combined with a fudgy brownie.",emoji:"\ud83c\udf6b",available:true,sort:23},
+{id:"p24",name:"Tiramisu",category:"Tubs",price:400,desc:"Tiramisu dessert tub.",emoji:"\ud83c\udf70",available:true,sort:24},
+{id:"p25",name:"Coco",category:"Tubs",price:450,desc:"Cold version of a classic hot chocolate.",emoji:"\ud83e\udd64",available:true,sort:25},
+{id:"p26",name:"Crunch",category:"Tubs",price:450,desc:"Crunch dessert tub.",emoji:"\ud83c\udf6b",available:true,sort:26},
+{id:"p27",name:"Cinnamon Roll",category:"Classics",price:200,desc:"Freshly baked cinnamon roll.",emoji:"\ud83e\udd50",available:true,sort:27},
+{id:"p28",name:"Chocolate Eclair",category:"Classics",price:180,desc:"Chocolate éclair.",emoji:"\ud83c\udf6b",available:true,sort:28},
+{id:"p29",name:"Chocolate Bombolini",category:"Classics",price:180,desc:"Chocolate bombolini.",emoji:"\ud83c\udf69",available:true,sort:29},
+{id:"p30",name:"Vanilla Cupcake",category:"Classics",price:140,desc:"Vanilla cupcake.",emoji:"\ud83e\uddc1",available:true,sort:30},
+{id:"p31",name:"Red Velvet Cupcake",category:"Classics",price:140,desc:"Red velvet cupcake.",emoji:"\ud83e\uddc1",available:true,sort:31},
+{id:"p32",name:"Chocolate Cupcake",category:"Classics",price:140,desc:"Chocolate cupcake.",emoji:"\ud83e\uddc1",available:true,sort:32},
+{id:"p33",name:"Bounty Balls",category:"Classics",price:80,desc:"Bounty-inspired bites.",emoji:"\ud83e\udd65",available:true,sort:33},
+{id:"p34",name:"Chocolate Crisps",category:"Classics",price:100,desc:"Chocolate crisps.",emoji:"\ud83c\udf6b",available:true,sort:34},
+{id:"p35",name:"Marshmallow Bites",category:"Classics",price:100,desc:"Marshmallow bites.",emoji:"\ud83c\udf6c",available:true,sort:35},
+{id:"p36",name:"Caramel Cake Tub",category:"Classics",price:400,desc:"Caramel cake tub.",emoji:"\ud83c\udf70",available:true,sort:36},
+{id:"p37",name:"Banana Bread",category:"Breads",price:500,desc:"Banana bread loaf.",emoji:"\ud83c\udf5e",available:true,sort:37},
+{id:"p38",name:"Tea Cake",category:"Breads",price:500,desc:"Tea cake loaf.",emoji:"\ud83c\udf70",available:true,sort:38},
+{id:"p39",name:"Classic Country Sourdough",category:"Breads",price:350,desc:"Classic country sourdough loaf.",emoji:"\ud83c\udf5e",available:true,sort:39},
+{id:"p40",name:"Seeded Ragi Sourdough",category:"Breads",price:400,desc:"Seeded ragi sourdough loaf.",emoji:"\ud83c\udf5e",available:true,sort:40},
+{id:"p41",name:"Black Wheat Sourdough",category:"Breads",price:450,desc:"Black wheat sourdough loaf.",emoji:"\ud83c\udf5e",available:true,sort:41},
+{id:"p42",name:"Classic Bagel (pack of 2)",category:"Breads",price:350,desc:"Pack of two classic bagels.",emoji:"\ud83e\udd6f",available:true,sort:42},
+{id:"p43",name:"Cheddar Cheese Bagel (pack of 2)",category:"Breads",price:400,desc:"Pack of two cheddar cheese bagels.",emoji:"\ud83e\udd6f",available:true,sort:43},
+{id:"p44",name:"Shokupan",category:"Breads",price:400,desc:"Soft Japanese-style bread loaf.",emoji:"\ud83c\udf5e",available:true,sort:44},
+{id:"p45",name:"Butter Croissant",category:"Breads",price:150,desc:"Classic butter croissant.",emoji:"\ud83e\udd50",available:true,sort:45},
+{id:"p46",name:"Chocolate Croissant",category:"Breads",price:180,desc:"Chocolate croissant.",emoji:"\ud83e\udd50",available:true,sort:46},
+{id:"p47",name:"Garlic Bread Roll (pack of 6)",category:"Breads",price:900,desc:"Pack of six garlic bread rolls.",emoji:"\ud83c\udf5e",available:true,sort:47},
+{id:"p48",name:"Basil & Cherry Tomato Focaccia Loaf",category:"Breads",price:900,desc:"Basil and cherry tomato focaccia loaf.",emoji:"\ud83c\udf5e",available:true,sort:48}
+];
+const defaultState={products:defaultProducts,orders:[],settings:{businessPhone:'',upiId:'paytm.s27opio@pty',upiName:"Auggie's Bakehouse",businessAddress:'Shop No. 13, ARV Regalia, Punyadham Ashram Road, Mohammadwadi, Pune - 411060',currencyNote:'Delivery fee will be checked and confirmed separately before your order is confirmed.'}};
+let state=loadState(),cart={},activeCategory='All';
+function loadState(){try{return JSON.parse(localStorage.getItem(STORE_KEY))||structuredClone(defaultState)}catch(e){return JSON.parse(JSON.stringify(defaultState))}}
+function save(){localStorage.setItem(STORE_KEY,JSON.stringify(state))}
+function rupees(n){return '₹'+Number(n||0).toLocaleString('en-IN')}
+function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function toast(s){const t=document.getElementById('toast');t.textContent=s;t.classList.remove('hidden');setTimeout(()=>t.classList.add('hidden'),2800)}
+function renderCategories(){document.getElementById('staticUpiPanel').classList.toggle('hidden',!state.settings.upiId);const cats=['All',...new Set(state.products.map(p=>p.category))];document.getElementById('categoryTabs').innerHTML=cats.map(c=>`<button class="tab ${activeCategory===c?'active':''}" data-cat="${escapeHtml(c)}">${escapeHtml(c)}</button>`).join('');document.querySelectorAll('[data-cat]').forEach(b=>b.onclick=()=>{activeCategory=b.dataset.cat;renderCategories();renderProducts()})}
+function renderProducts(){const ps=state.products.filter(p=>p.available&&(activeCategory==='All'||p.category===activeCategory)).sort((a,b)=>(a.sort||0)-(b.sort||0));document.getElementById('productGrid').innerHTML=ps.map(p=>`<article class="product"><div class="product-art">${escapeHtml(p.emoji||'🍪')}</div><div class="product-body"><h3>${escapeHtml(p.name)}</h3><div class="desc">${escapeHtml(p.desc||'Freshly baked at Auggie’s Bakehouse.')}</div><div class="product-foot"><span class="price">${rupees(p.price)}</span><button class="add" data-add="${p.id}">Add +</button></div></div></article>`).join('')||'<p class="muted">No available products in this category right now.</p>';document.querySelectorAll('[data-add]').forEach(b=>b.onclick=()=>{cart[b.dataset.add]=(cart[b.dataset.add]||0)+1;renderCart();toast('Added to your cart')})}
+function renderCart(){const items=Object.entries(cart).filter(([id,q])=>q>0).map(([id,q])=>({p:state.products.find(p=>p.id===id),q})).filter(x=>x.p);let sub=items.reduce((s,x)=>s+x.p.price*x.q,0);document.getElementById('cartItems').innerHTML=items.length?items.map(({p,q})=>`<div class="cart-row"><div><b>${escapeHtml(p.name)}</b><small>${rupees(p.price)} each · ${rupees(p.price*q)}</small></div><div class="qty"><button data-dec="${p.id}">−</button><b>${q}</b><button data-inc="${p.id}">+</button></div></div>`).join(''):'<p class="muted">Your cart is empty. Add something delicious from the menu above.</p>';document.getElementById('subtotal').textContent=rupees(sub);const count=items.reduce((s,x)=>s+x.q,0);document.getElementById('cartCount').textContent=count;document.getElementById('bottomCartCount').textContent=count;document.getElementById('bottomCart').textContent=`View cart · ${count} items`;document.querySelectorAll('[data-dec]').forEach(b=>b.onclick=()=>{cart[b.dataset.dec]--;if(cart[b.dataset.dec]<=0)delete cart[b.dataset.dec];renderCart()});document.querySelectorAll('[data-inc]').forEach(b=>b.onclick=()=>{cart[b.dataset.inc]++;renderCart()})}
+function showShop(){document.getElementById('shopView').classList.remove('hidden');document.getElementById('adminView').classList.add('hidden');document.getElementById('bottomCart').classList.remove('hidden')}
+function showAdmin(tab='orders'){document.getElementById('shopView').classList.add('hidden');document.getElementById('adminView').classList.remove('hidden');document.getElementById('bottomCart').classList.add('hidden');selectAdminTab(tab);renderOrders();renderProductAdmin();loadSettings()}
+function selectAdminTab(tab){['orders','products','settings'].forEach(t=>document.getElementById('admin'+t[0].toUpperCase()+t.slice(1)).classList.toggle('hidden',t!==tab));document.querySelectorAll('[data-admin-tab]').forEach(b=>b.classList.toggle('active',b.dataset.adminTab===tab))}
+function renderOrders(){const date=document.getElementById('filterDate').value,status=document.getElementById('filterStatus').value;const orders=state.orders.filter(o=>(!date||o.date===date)&&(!status||o.status===status)).sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));document.getElementById('ordersList').innerHTML=orders.length?orders.map(o=>`<article class="order-card"><div style="display:flex;justify-content:space-between;gap:8px;align-items:start"><div><h4>${escapeHtml(o.id)} · ${escapeHtml(o.name)}</h4><span class="status">${escapeHtml(o.status)}</span></div><b>${rupees(o.subtotal)}</b></div><div class="order-meta">${escapeHtml(o.date)} · ${escapeHtml(o.time)} · ${escapeHtml(o.fulfilment)}<br>${escapeHtml(o.phone)} · ${escapeHtml(o.address||'Pickup')}<br>${o.items.map(i=>escapeHtml(i.name)+' × '+i.qty).join(', ')}<br>Payment preference: ${escapeHtml(o.payMethod)}<br>Delivery quote: ${o.deliveryCharge==null?'Pending':rupees(o.deliveryCharge)} · Final total: ${o.deliveryCharge==null?'Pending':rupees(o.subtotal+o.deliveryCharge)}</div><div class="two" style="margin-top:10px"><div class="field"><label>Status</label><select data-status="${o.id}">${['New request','Awaiting delivery quote','Awaiting customer approval','Confirmed','Preparing','Out for delivery','Completed','Cancelled'].map(s=>`<option ${o.status===s?'selected':''}>${s}</option>`).join('')}</select></div><div class="field"><label>Delivery fee (₹)</label><input data-fee="${o.id}" type="number" min="0" step="1" value="${o.deliveryCharge==null?'':o.deliveryCharge}" placeholder="Quote"></div></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="small-btn" data-saveorder="${o.id}">Save changes</button><button class="small-btn" data-waorder="${o.id}">WhatsApp customer</button><button class="small-btn" data-pay="${o.id}">Create UPI link</button></div></article>`).join(''):'<p class="muted">No orders match these filters. New order requests will appear here.</p>';
+document.querySelectorAll('[data-saveorder]').forEach(b=>b.onclick=()=>{const o=state.orders.find(x=>x.id===b.dataset.saveorder);o.status=document.querySelector(`[data-status="${o.id}"]`).value;const fee=document.querySelector(`[data-fee="${o.id}"]`).value;o.deliveryCharge=fee===''?null:Number(fee);save();renderOrders();toast('Order updated')});
+document.querySelectorAll('[data-waorder]').forEach(b=>b.onclick=()=>{const o=state.orders.find(x=>x.id===b.dataset.waorder);const msg=customerMessage(o);if(!o.phone){toast('Customer phone number missing');return}window.open('https://wa.me/'+o.phone.replace(/\D/g,'')+'?text='+encodeURIComponent(msg),'_blank')});
+document.querySelectorAll('[data-pay]').forEach(b=>b.onclick=()=>{const o=state.orders.find(x=>x.id===b.dataset.pay);if(o.deliveryCharge==null){toast('Enter the delivery fee first');return}const total=o.subtotal+o.deliveryCharge;const url=upiUrl(total,o.id);if(!url){toast('Add your UPI ID in Settings first');return}navigator.clipboard?.writeText(url);window.open(url,'_blank');toast('UPI payment link opened. Verify payment separately.')});
+}
+function customerMessage(o){return `Hello ${o.name}, this is Auggie's Bakehouse.\\nOrder ${o.id}\\nItems: ${o.items.map(i=>i.name+' × '+i.qty).join(', ')}\\nItems subtotal: ${rupees(o.subtotal)}\\nDelivery: ${o.deliveryCharge==null?'Quote pending':rupees(o.deliveryCharge)}\\n${o.deliveryCharge==null?'We will confirm the delivery charge after checking the live quote.':'Final total: '+rupees(o.subtotal+o.deliveryCharge)}\\nRequested: ${o.date}, ${o.time}\\nPlease confirm if you approve the total.`}
+function upiUrl(amount,orderId){if(!state.settings.upiId)return '';return `upi://pay?pa=${encodeURIComponent(state.settings.upiId)}&pn=${encodeURIComponent(state.settings.upiName||"Auggie's Bakehouse")}&am=${encodeURIComponent(amount)}&cu=INR&tn=${encodeURIComponent('Auggies order '+orderId)}`}
+function renderProductAdmin(){document.getElementById('productAdminList').innerHTML=state.products.slice().sort((a,b)=>(a.sort||0)-(b.sort||0)).map(p=>`<div class="admin-item"><div><b>${escapeHtml(p.name)}</b><div class="order-meta">${escapeHtml(p.category)} · ${rupees(p.price)} · ${p.available?'Available':'Unavailable'}</div></div><div style="display:flex;gap:6px;align-items:center"><button class="small-btn" data-edit="${p.id}">Edit</button><button class="small-btn danger" data-delete="${p.id}">Delete</button></div></div>`).join('');document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>editProduct(b.dataset.edit));document.querySelectorAll('[data-delete]').forEach(b=>b.onclick=()=>{if(confirm('Delete this product?')){state.products=state.products.filter(p=>p.id!==b.dataset.delete);save();renderProductAdmin();renderCategories();renderProducts()}})}
+function editProduct(id){const p=state.products.find(p=>p.id===id);if(!p)return;document.getElementById('editProductId').value=p.id;document.getElementById('pName').value=p.name;document.getElementById('pPrice').value=p.price;document.getElementById('pCategory').value=p.category;document.getElementById('pEmoji').value=p.emoji||'🍪';document.getElementById('pDesc').value=p.desc||'';document.getElementById('pAvailable').value=String(p.available);document.getElementById('pSort').value=p.sort||10;document.getElementById('productFormTitle').textContent='Edit product';window.scrollTo({top:0,behavior:'smooth'})}
+function clearProductForm(){document.getElementById('productForm').reset();document.getElementById('editProductId').value='';document.getElementById('productFormTitle').textContent='Add a product';document.getElementById('pSort').value=10}
+function loadSettings(){for(const k of ['businessPhone','upiId','upiName','businessAddress','currencyNote'])document.getElementById(k).value=state.settings[k]||''}
+document.getElementById('productForm').onsubmit=e=>{e.preventDefault();const id=document.getElementById('editProductId').value||'p'+Date.now();const p={id,name:document.getElementById('pName').value.trim(),price:Number(document.getElementById('pPrice').value),category:document.getElementById('pCategory').value.trim(),emoji:document.getElementById('pEmoji').value,desc:document.getElementById('pDesc').value.trim(),available:document.getElementById('pAvailable').value==='true',sort:Number(document.getElementById('pSort').value)||10};const i=state.products.findIndex(x=>x.id===id);if(i>=0)state.products[i]=p;else state.products.push(p);save();clearProductForm();renderProductAdmin();renderCategories();renderProducts();toast('Product saved')};
+document.getElementById('cancelEdit').onclick=clearProductForm;
+document.getElementById('settingsForm').onsubmit=e=>{e.preventDefault();for(const k of ['businessPhone','upiId','upiName','businessAddress','currencyNote'])state.settings[k]=document.getElementById(k).value.trim();save();toast('Settings saved')};
+document.getElementById('orderForm').onsubmit=e=>{e.preventDefault();const items=Object.entries(cart).map(([id,qty])=>({p:state.products.find(p=>p.id===id),qty})).filter(x=>x.p&&x.qty>0);if(!items.length){toast('Add at least one item first');return}const fulfilment=document.getElementById('fulfilment').value;const address=fulfilment==='Pickup'?state.settings.businessAddress:document.getElementById('custAddress').value.trim();const subtotal=items.reduce((s,x)=>s+x.p.price*x.qty,0);const id='AB-'+new Date().toISOString().slice(2,10).replace(/-/g,'')+'-'+String(state.orders.length+1).padStart(3,'0');const o={id,createdAt:new Date().toISOString(),name:document.getElementById('custName').value.trim(),phone:document.getElementById('custPhone').value.trim(),fulfilment,address,date:document.getElementById('orderDate').value,time:document.getElementById('orderTime').value,notes:document.getElementById('orderNotes').value.trim(),payMethod:document.getElementById('payMethod').value,items:items.map(x=>({id:x.p.id,name:x.p.name,price:x.p.price,qty:x.qty})),subtotal,deliveryCharge:fulfilment==='Pickup'?0:null,status:fulfilment==='Pickup'?'Awaiting customer approval':'Awaiting delivery quote'};state.orders.unshift(o);save();cart={};renderCart();const msg=`NEW AUGGIE'S BAKEHOUSE ORDER REQUEST\\nOrder: ${o.id}\\nName: ${o.name}\\nPhone: ${o.phone}\\nType: ${o.fulfilment}\\nAddress: ${o.address}\\nDate/time: ${o.date}, ${o.time}\\nItems:\\n${o.items.map(i=>'- '+i.name+' × '+i.qty+' = '+rupees(i.price*i.qty)).join('\\n')}\\nItems subtotal: ${rupees(o.subtotal)}\\nDelivery: ${o.deliveryCharge===0?'₹0 (pickup)':'PENDING - check live quote'}\\nPayment preference: ${o.payMethod}\\nNotes: ${o.notes||'None'}\\nPlease check delivery quote and confirm final total with customer.`;const num=state.settings.businessPhone.replace(/\D/g,'');if(num){window.open('https://wa.me/'+num+'?text='+encodeURIComponent(msg),'_blank')}toast('Order request saved in this demo.');e.target.reset();document.getElementById('orderDate').value=new Date().toISOString().slice(0,10);document.getElementById('addressField').classList.remove('hidden');document.getElementById('custAddress').required=true;document.getElementById('orderTime').value='';document.getElementById('filterDate').value=o.date;showAdmin('orders');};
+document.getElementById('fulfilment').onchange=e=>{const pickup=e.target.value==='Pickup';document.getElementById('addressField').classList.toggle('hidden',pickup);document.getElementById('custAddress').required=!pickup};
+document.getElementById('openAdmin').onclick=()=>showAdmin();document.getElementById('bottomManage').onclick=()=>showAdmin();document.getElementById('backToShop').onclick=showShop;document.getElementById('scrollCart').onclick=()=>document.getElementById('orderForm').scrollIntoView({behavior:'smooth'});document.getElementById('bottomCart').onclick=()=>{showShop();document.getElementById('orderForm').scrollIntoView({behavior:'smooth'})};
+document.querySelectorAll('[data-admin-tab]').forEach(b=>b.onclick=()=>selectAdminTab(b.dataset.adminTab));
+document.getElementById('filterDate').onchange=renderOrders;document.getElementById('filterStatus').onchange=renderOrders;
+document.getElementById('directWhatsApp').onclick=()=>{if(!state.settings.businessPhone){toast('Add your WhatsApp number in Manage → Settings');return}window.open('https://wa.me/'+state.settings.businessPhone.replace(/\D/g,''),'_blank')};
+document.getElementById('exportData').onclick=()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='auggies-bakehouse-demo-backup.json';a.click();URL.revokeObjectURL(a.href)};
+document.getElementById('resetDemo').onclick=()=>{if(confirm('Reset all demo orders, products and settings? Export a backup first if needed.')){state=JSON.parse(JSON.stringify(defaultState));save();renderCategories();renderProducts();renderCart();renderOrders();renderProductAdmin();loadSettings();toast('Demo reset')}}; 
+document.getElementById('orderDate').min=new Date().toISOString().slice(0,10);document.getElementById('orderDate').value=new Date().toISOString().slice(0,10);document.getElementById('filterDate').value=new Date().toISOString().slice(0,10);
+renderCategories();renderProducts();renderCart();
+if('serviceWorker' in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+</script>
+</body></html>
